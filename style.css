@@ -84,13 +84,14 @@ a {
 
 .grid-container-large-alt {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 5px;
     width: 100%;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 5%;    
+    padding-top: 5%; 
+    padding-bottom: 5%;
     overflow: hidden;
 }
 
@@ -101,8 +102,7 @@ a {
     width: 100%;
     background-color: white;
     margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5%;  
+    margin-right: auto;  
     overflow: hidden;
     padding-bottom: 5%;
 }
@@ -223,14 +223,15 @@ ul li:hover:before{
 }
 
 .contact {
-    text-align: end;
+    margin-left: 12.5rem;
+
 }
 
 .timeline {
     position: relative;
     width: 65%;
     max-width: 1140px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .timeline::after {
@@ -361,4 +362,16 @@ ul li:hover:before{
     font-size: 16px;
     line-height: 22px;
     color: #000000;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
 }
