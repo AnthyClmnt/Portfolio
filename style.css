@@ -53,7 +53,7 @@ a {
 .flex-box {
     display: flex;
     justify-self: center;
-    width: 70%;
+    width: 65%;
 }
 
 .about-push-right {
