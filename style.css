@@ -50,7 +50,14 @@ a {
     cursor: pointer;
 }
 
-.parallax {
+.flex-box {
+    display: flex;
+    justify-self: center;
+    width: 70%;
+}
+
+.about-push-right {
+    margin-left: 5rem;
 }
 
 .grid-container {
@@ -85,7 +92,8 @@ a {
 
 .grid-container-large-alt {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: center;
+    grid-template-columns: 1fr;
     grid-gap: 5px;
     width: 100%;
     background-color: white;
@@ -222,11 +230,6 @@ ul li .fab{
 
 ul li:hover:before{
     transform: scale(1.1);
-}
-
-.contact {
-    margin-left: 12.5rem;
-
 }
 
 .timeline {
