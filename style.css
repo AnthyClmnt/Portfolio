@@ -408,6 +408,7 @@ ul li:hover:before{
 
 .skill-animation {
     animation: growProgressBar 1.8s 1 forwards;
+    -webkit-animation: growProgressBar 1.8s 1 forwards;
 }
   
 div[role="progressbar"] {
