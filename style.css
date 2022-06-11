@@ -390,10 +390,15 @@ ul li:hover:before{
     flex-wrap: wrap;
 }
 
-@keyframes growProgressBar {
+@-webkit-keyframes growProgressBar {
     0%, 20% { --pgPercentage: 0; }
     100% { --pgPercentage: var(--value); }
 }
+
+@keyframes growProgressBar {
+    0%, 20% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+} 
   
 @property --pgPercentage {
     syntax: '<number>';
