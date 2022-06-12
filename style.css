@@ -114,7 +114,7 @@ a {
     margin-right: auto;  
     overflow: hidden;
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 7.5%;
 }
 
 .grid-items-buttons {
@@ -412,10 +412,10 @@ ul li:hover:before{
 }
   
 div[role="progressbar"] {
-    margin: 2rem;
-    --size: 12rem;
+    margin: 1.5rem;
+    --size: 10rem;
     --fg: var(--colour);
-    --bg: gray;
+    --bg: rgb(32, 32, 32, .05);
     --pgPercentage: var(--value);
     --text: var(var(--text));
     width: var(--size);
@@ -435,4 +435,71 @@ div[role="progressbar"] {
 div[role="progressbar"]::before {
     counter-reset: percentage var(--value);
     content: var(--text); 
+}
+
+.flex-project-cards {
+    display: flex;
+    width: 67.5%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 20rem;
+    height: auto;
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    margin-bottom: 2.5rem;
+}
+
+.card-img {
+    height: 10rem;
+    background-image: url(static/code1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5% 5% 2.5%;
+    border-radius: 15% 15% 0 0;
+}
+
+.card-title {
+    margin: 0 5% 0;
+    text-align: left;
+    font-size: 1.8rem;
+}
+
+.card-sub {
+    margin: 0 5% 10%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+}
+
+.card-desc {
+    margin: 0 5% 5%;
+}
+
+.card-link {
+    width: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    float: right;
+    margin: 0 10% 5%;
+    text-decoration: unset;
+    font-weight: 600;
+    color: #202020;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 10px;
+    background: #f2f4f6;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+}
+
+.card-link:hover {
+    transform: scale(1.05);
+    transition: .2s linear;
 }

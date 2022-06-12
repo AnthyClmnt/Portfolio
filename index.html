@@ -5,8 +5,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro" rel="stylesheet">    
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/animation.js"></script>
-    <script src="js/isElementOnScreen.js"></script>
+    <script src="js/revealAnimation.js"></script>
+    <script src="js/skillAnimstion.js"></script>
 <head>
 <title>Anthony Clermont</title>
 </head>
@@ -137,21 +137,46 @@
 
     <div class="grid-container-large-alt">
         <h2 class="reveal">My Skills</h2>
+        <div style="width: 45%; margin-left:auto; margin-right:auto">
+            <p class="reveal" style="text-align: center;">The progress bars are relative to each other. I continue to learn and develop my skills, and recently began learning both react and angular. </p>
+        </div>
         <div class="skills-flex reveal">
             <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:95; --text:'Python'; --colour: #00ca4e"></div>
-            <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90; --text: 'SQL'; --colour: #ffbd44"></div>
-            <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:85; --text: 'Java'; --colour: #ffbd44"></div>
+            <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:80; --text: 'Java'; --colour: #ffbd44"></div>
+            <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90; --text: 'SQL'; --colour: #00ca4e"></div>
+            <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:60; --text: 'Javascript'; --colour: #ffbd44"></div>
             <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90; --text: 'HTML'; --colour: #00ca4e "></div>
-            <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:60; --text: 'CSS'; --colour: #00ca4e"></div>
-            <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90; --text: 'Javascript'; --colour: #ffbd44"></div>
+            <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:85; --text: 'CSS'; --colour: #00ca4e"></div>
+            <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:35; --text: 'Angular'; --colour: #ff605c"></div>
+            <div class="skill" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:50; --text: 'React'; --colour: #ff605c"></div>
         </div>
     </div>
         
     <div class="grid-container-large-alt" style="background-color:#ffbd44">
-        <div></div>
-        <h2 class="reveal">My Work</h2>
-        <div></div>
-        <div></div>
+        <h2 class="reveal">My Recent Work</h2>
+        <div class="flex-project-cards reveal">
+            <div class="card">
+                <div class="card-img" style="background-image: url(static/port-img.png);"></div>
+                <h2 class="card-title">Portfolio Website</h2>
+                <h3 class="card-sub">Personal project to create this website.</h3>
+                <p class="card-desc">HTML, CSS and Javascript website to present my skills in fron-end development.</p>
+                <a href="https://github.com/AnthyClmnt/Portfolio" class="card-link"> Git Repo </a>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url(static/fb-img.png);"></div>
+                <h2 class="card-title">Feeding Newcaslte</h2>
+                <h3 class="card-sub">Help resoure website</h3>
+                <p class="card-desc">A python flask framework website, helping those in need of food in Newcaslte.</p>
+                <a href="https://github.com/AnthyClmnt/CSC2033-Food-Bank-Project" class="card-link"> Git Repo </a>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url(static/nft-img.png);"></div>
+                <h2 class="card-title"> NFT Generation </h2>
+                <h3 class="card-sub"> Python generation script</h3>
+                <p class="card-desc"> A scipt using python's PIL library to uniquely generate nft's. </p>
+                <a href="https://github.com/AnthyClmnt/NftGeneration" class="card-link"> Git Repo </a>
+            </div>
+        </div>
     </div>
 
     <div class="grid-container-large-alt">
