@@ -4,6 +4,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro" rel="stylesheet">    
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/revealAnimation.js"></script>
     <script src="js/skillAnimstion.js"></script>
@@ -179,14 +181,41 @@
         </div>
     </div>
 
-    <div class="grid-container-large-alt">
-        <div></div>
-        <h2 class="reveal">Contact Me</h2>
-        <div></div>
-        <div></div>
+    <div class="grid-container-large-alt" style="background: #202020;">
+        <h2 class="reveal" style="color: white">Contact Me</h2>
+        <div class="wrapper contact-container reveal">
+            <form action="#">
+                <div class="dbl-field">
+                    <div class="field">
+                    <input type="text" name="name" placeholder="Enter your name">
+                    <i class='fas fa-user'></i>
+                    </div>
+                    <div class="field">
+                    <input type="text" name="email" placeholder="Enter your email">
+                    <i class='fas fa-envelope'></i>
+                    </div>
+                </div>
+                <div class="dbl-field">
+                    <div class="field">
+                    <input type="text" name="phone" placeholder="Enter your phone">
+                    <i class='fas fa-phone-alt'></i>
+                    </div>
+                    <div class="field">
+                    <input type="text" name="company" placeholder="Enter your company name">
+                    <i class='fas fa-globe'></i>
+                    </div>
+                </div>
+                <div class="message">
+                    <textarea placeholder="Write your message" name="message"></textarea>
+                    <i class="material-icons">message</i>
+                </div>
+                <div class="button-area span">
+                    <button type="submit">Send Message</button>
+                    <span></span>
+                </div>
+            </form>
+        </div>
+        <script src="js/email.js"></script>
     </div>
 </body>
-<footer>
-    <h1 style="color: white;">sup pussio</h2>
-</footer>
 </html>
