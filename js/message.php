@@ -1,25 +1,33 @@
 <?php
-  $name = htmlspecialchars($_POST['name']);
-  $email = htmlspecialchars($_POST['email']);
-  $phone = htmlspecialchars($_POST['phone']);
-  $company = htmlspecialchars($_POST['company']);
-  $message = htmlspecialchars($_POST['message']);
-
-  if(!empty($email) && !empty($message)){
-    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-      $receiver = "Anthony.clermont@outlook.com"; //enter that email address where you want to receive all messages
-      $subject = "From: $name <$email>";
-      $body = "Name: $name\nEmail: $email\nPhone: $phone\nWebsite: $company\n\nMessage:\n$message\n\nRegards,\n$name";
-      $sender = "From: $email";
-      if(mail($receiver, $subject, $body, $sender)){
-         echo "Your message has been sent";
-      }else{
-         echo "Sorry, failed to send your message!";
-      }
-    }else{
-      echo "Enter a valid email address!";
+    $errors = '';
+    $myemail = 'anthony.clermont@outlook.com';//<-----Put Your email address here.
+    if(empty($_POST['name'])  ||
+       empty($_POST['email']) ||
+       empty($_POST['message']))
+    {
+        $errors .= "\n Error: all fields are required";
     }
-  }else{
-    echo "Email and message field is required!";
-  }
-?>
+    $name = $_POST['name'];
+    $email_address = $_POST['email'];
+    $message = $_POST['message'];
+    if (!preg_match(
+    "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
+    $email_address))
+    {
+        $errors .= "\n Error: Invalid email address";
+    }
+    
+    if( empty($errors))
+    {
+    $to = $myemail;
+    $email_subject = "Contact form submission: $name";
+    $email_body = "You have received a new message. ".
+    " Here are the details:\n Name: $name \n ".
+    "Email: $email_address\n Message \n $message";
+    $headers = "From: $myemail\n";
+    $headers .= "Reply-To: $email_address";
+    mail($to,$email_subject,$email_body,$headers);
+    //redirect to the 'thank you' page
+    header('Location: contact-form-thank-you.html');
+    }
+    ?>
